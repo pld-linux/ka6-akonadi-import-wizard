@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		akonadi-import-wizard
 Summary:	Akonadi import wizard
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	fa5dc528a8c9609194c93d14c5e4d0b0
+# Source0-md5:	71c129f6b015caf6cf9464abcde0211a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -102,17 +102,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6ImportWizard.so.*.*
+%{_libdir}/libKPim6ImportWizard.so.*.*
 %ghost %{_libdir}/libKPim6ImportWizard.so.6
 %dir %{_libdir}/qt6/plugins/pim6/importwizard
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/balsaimporterplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/clawsmailimporterplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/evolutionv3importerplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/icedoveimporterplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/seamonkeyimporterplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/sylpheedimporterplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/thunderbirdimporterplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/importwizard/trojitaimporterplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/balsaimporterplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/clawsmailimporterplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/evolutionv3importerplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/icedoveimporterplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/seamonkeyimporterplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/sylpheedimporterplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/thunderbirdimporterplugin.so
+%{_libdir}/qt6/plugins/pim6/importwizard/trojitaimporterplugin.so
 %{_desktopdir}/org.kde.akonadiimportwizard.desktop
 %{_iconsdir}/hicolor/128x128/apps/kontact-import-wizard.png
 %{_iconsdir}/hicolor/256x256/apps/kontact-import-wizard.png
@@ -123,7 +123,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_bindir}/akonadiimportwizard
+%attr(755,root,root) %{_bindir}/akonadiimportwizard
 %{_includedir}/KPim6/ImportWizard
 %{_libdir}/cmake/KPim6ImportWizard
 %{_libdir}/libKPim6ImportWizard.so
