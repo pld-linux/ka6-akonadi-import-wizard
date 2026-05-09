@@ -6,6 +6,7 @@
 %define		qtver		5.15.2
 %define		kaname		akonadi-import-wizard
 Summary:	Akonadi import wizard
+Summary(pl.UTF-8):	"Czarodziej" importu Akonadi
 Name:		ka6-%{kaname}
 Version:	26.04.1
 Release:	1
@@ -51,6 +52,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Assistant to import PIM data from other applications into Akonadi for
 use in KDE PIM applications.
+
+%description -l pl.UTF-8
+Asystent importu danych PIM z innych aplikacji do Akonadi do użytku w
+innych programach KDE PIM.
 
 %package devel
 Summary:	Header files for %{kaname} development
