@@ -9,26 +9,35 @@ Summary:	Akonadi import wizard
 Summary(pl.UTF-8):	"Czarodziej" importu Akonadi
 Name:		ka6-%{kaname}
 Version:	26.04.3
-Release:	2
+Release:	3
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	77c9bedee49fdb1559445a7c7ead8408
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
-BuildRequires:	Qt6Gui-devel
-BuildRequires:	Qt6Widgets-devel
+BuildRequires:	Qt6Gui-devel >= %{qtver}
+BuildRequires:	Qt6TaskTree-devel >= %{qtver}
+BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
+BuildRequires:	gpgmepp-devel
+BuildRequires:	ka6-akonadi-contacts-devel >= %{kdeappsver}
 BuildRequires:	ka6-akonadi-devel >= %{kdeappsver}
+BuildRequires:	ka6-akonadi-mime-devel >= %{kdeappsver}
 BuildRequires:	ka6-kidentitymanagement-devel >= %{kdeappsver}
+BuildRequires:	ka6-kimap-devel >= %{kdeappsver}
 BuildRequires:	ka6-kmailtransport-devel >= %{kdeappsver}
+BuildRequires:	ka6-kmime-devel >= %{kdeappsver}
+BuildRequires:	ka6-kpimtextedit-devel >= %{kdeappsver}
 BuildRequires:	ka6-libkdepim-devel >= %{kdeappsver}
+BuildRequires:	ka6-libkleo-devel >= %{kdeappsver}
 BuildRequires:	ka6-mailcommon-devel >= %{kdeappsver}
 BuildRequires:	ka6-mailimporter-devel >= %{kdeappsver}
 BuildRequires:	ka6-messagelib-devel >= %{kdeappsver}
 BuildRequires:	ka6-pimcommon-devel >= %{kdeappsver}
 BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf6-karchive-devel >= %{kframever}
 BuildRequires:	kf6-kauth-devel >= %{kframever}
 BuildRequires:	kf6-kconfig-devel >= %{kframever}
 BuildRequires:	kf6-kcontacts-devel >= %{kframever}
@@ -36,8 +45,10 @@ BuildRequires:	kf6-kcrash-devel >= %{kframever}
 BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
 BuildRequires:	kf6-kdoctools-devel >= %{kframever}
 BuildRequires:	kf6-kio-devel >= %{kframever}
+BuildRequires:	kf6-kitemmodels-devel >= %{kframever}
 BuildRequires:	kf6-kwallet-devel >= %{kframever}
 BuildRequires:	ninja
+BuildRequires:	qgpgme-qt6-devel
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
