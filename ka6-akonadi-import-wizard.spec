@@ -9,11 +9,12 @@ Summary:	Akonadi import wizard
 Summary(pl.UTF-8):	"Czarodziej" importu Akonadi
 Name:		ka6-%{kaname}
 Version:	26.04.3
-Release:	3
+Release:	4
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	77c9bedee49fdb1559445a7c7ead8408
+Patch0:		find_ki18n.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -44,6 +45,9 @@ BuildRequires:	kf6-kcontacts-devel >= %{kframever}
 BuildRequires:	kf6-kcrash-devel >= %{kframever}
 BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
 BuildRequires:	kf6-kdoctools-devel >= %{kframever}
+BuildRequires:	kf6-kguiaddons-devel >= %{kframever}
+BuildRequires:	kf6-ki18n-devel >= %{kframever}
+BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
 BuildRequires:	kf6-kio-devel >= %{kframever}
 BuildRequires:	kf6-kitemmodels-devel >= %{kframever}
 BuildRequires:	kf6-kwallet-devel >= %{kframever}
@@ -83,6 +87,7 @@ Pliki nagłówkowe dla programistów używających %{kaname}.
 
 %prep
 %setup -q -n %{kaname}-%{version}
+%patch -P0 -p1
 
 %build
 %cmake \
