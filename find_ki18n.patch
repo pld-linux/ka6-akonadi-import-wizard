@@ -1,0 +1,10 @@
+--- akonadi-import-wizard-26.04.3/CMakeLists.txt~	2026-06-28 03:43:16.000000000 +0000
++++ akonadi-import-wizard-26.04.3/CMakeLists.txt	2026-08-03 20:28:59.663959870 +0000
+@@ -122,6 +122,7 @@
+ find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
+ find_package(KF6Archive ${KF_MIN_VERSION} REQUIRED)
+ find_package(KF6IconThemes ${KF_MIN_VERSION} CONFIG REQUIRED)
++find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
+ 
+ find_package(KF6DocTools ${KF_MIN_VERSION})
+ set_package_properties(
