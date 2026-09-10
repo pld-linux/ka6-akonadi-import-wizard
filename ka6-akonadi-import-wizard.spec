@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.08.0
+%define		kdeappsver	26.08.1
 %define		kframever	6.29.0
 %define		qtver		5.15.2
 %define		kaname		akonadi-import-wizard
 Summary:	Akonadi import wizard
 Summary(pl.UTF-8):	"Czarodziej" importu Akonadi
 Name:		ka6-%{kaname}
-Version:	26.08.0
+Version:	26.08.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	00863d94e74ddeafdeaa03610c943b50
+# Source0-md5:	1bb52f51aa6d6a07be46868c6d7fb321
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
